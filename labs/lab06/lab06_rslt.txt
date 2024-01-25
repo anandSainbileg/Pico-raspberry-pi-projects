@@ -1,0 +1,23 @@
+From the output we can see that:
+
+Single core time:
+	Single precision time: 112813 microseconds
+	Double precision time: 198407 microseconds
+	Single core total time for the functions: 313429 microseconds
+Both core time:
+	Single precision time: 120716 microseconds
+	Double precision time: 204300 microseconds
+	Parallel core total time for the functions: 205304 microseconds
+
+1. Using both cores (Parallel execution) provides a faster execution over the sing core (sequential execution). 
+
+2. Single precision function (wallis_float) is much faster than double precision function (wallis_double).
+
+3. For the single core, the total time taken for using both functions is almost equal to the sum of the 
+durations from each function which is the proving the point that it is running sequentially. 
+When using both cores the total time taken for using both functions is not the same as the sum, 
+in fact is relatively close to the double precision time (204300 microseconds) meaning that when running parallel, 
+the total time almost depends on the duration of the slower function and it proves the point that it is running in 
+parallel by both cores executing both functions at the same time.
+
+4. Parallel execution can provide a substantial performance boost when it comes to numerical approximations.
